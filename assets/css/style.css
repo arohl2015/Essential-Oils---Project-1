@@ -1,0 +1,102 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  @import "bourbon";
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  display: (flex);
+  align-content:(center);
+  color: rgb(3, 3, 145);
+  min-height: 100px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  text-align: center;
+  background-color: lightgreen;
+}
+
+.container{
+  padding: 80px 90px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB-VliJ-_hxA6oLUvpP8oT7VFH4diBybs0lenx_zyd5lfhlD5O);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 4px 1px #BBB;
+  margin: auto;
+  text-align: center;
+}
+
+.wrap{  
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 30px auto;
+}
+
+.clicker{
+  background-color: white;
+  outline: none;  
+  font-weight: 600;
+	  position:absolute;
+  cursor: pointer;
+  padding: 0;
+	  border: none;
+	  height: 64px;
+	  width: 64px;
+  left: 8px;
+  top: 8px;
+	  border-radius: 100px;
+	  z-index: 2;
+}
+
+.clicker:active{
+	  transform: translate(0, 1px);
+  height: 63px;
+	  box-shadow: 0px 1px 0 0 rgb(190,190,190) inset;
+}
+
+.circle{
+	  position: relative;
+  border-radius:40px;
+	  width: 80px;
+	  height: 80px;
+	  z-index: 1;
+}
+
+.circle.third{
+  border-radius: 0;
+}
+
+.clicker.faster:hover + .circle, .clicker.faster:active + .circle {
+	  animation: rotator linear .4s infinite;
+}
+
+@keyframes rotator{
+	  from{ transform: rotate(0deg); }
+	  to{ transform: rotate(360deg); }
+}
+
+.angled.third{
+			background-image: linear-gradient(45deg, 
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0) 30%,
+                rgb(130,230,135) 30%,
+								rgb(130,230,135) 70%, 
+                rgba(255, 255, 255, 0) 70%, 
+                rgba(255, 255, 255, 0) 100%);
+}
