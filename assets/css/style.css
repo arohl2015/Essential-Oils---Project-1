@@ -20,6 +20,18 @@ table {
   box-sizing: border-box;
 }
 
+p{
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  justify-content: left;
+}
+
+#patchtest {
+  text-align: left;
+  padding-left: 40%;
+}
+
 body {
   display: (flex);
   align-content:(center);
