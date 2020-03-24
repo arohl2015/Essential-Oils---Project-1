@@ -30,6 +30,7 @@ p{
 #patchtest {
   text-align: left;
   padding-left: 40%;
+  font-size: 30px;
 }
 
 body {
@@ -41,6 +42,8 @@ body {
   font-size: 19px;
   text-align: center;
   background-color: lightgreen;
+  
+  
 }
 
 .container{
