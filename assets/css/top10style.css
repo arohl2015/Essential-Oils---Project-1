@@ -1,3 +1,13 @@
+.display-4 {
+    text-align: center;
+    color: purple;
+}
+
+.lead {
+    text-align: center;
+    color: purple;
+}
+
 #carouselExampleCaptions {
     max-width: 75%;
     text-align: center;
