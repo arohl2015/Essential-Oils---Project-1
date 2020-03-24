@@ -1,4 +1,4 @@
-$("#clickButton").on("click", function(event) {
+$("#clickButton").on("click", function (event) {
     event.preventDefault();
 
     // Here we grab the text from the input box
@@ -7,8 +7,8 @@ $("#clickButton").on("click", function(event) {
     //construct our URL
     var queryURL = 'http://newsapi.org/v2/everything?q="hand+sanitizer"&apiKey=d41b710dbebf47e0939ee69238607a46';
     $.ajax({
-      url: queryURL,
-      method: "GET"
+        url: queryURL,
+        method: "GET"
     }).then(function (response) {
         for (let index = 0; index < response.articles.length; index++) {
             console.log(response.articles[index].title);
@@ -23,37 +23,35 @@ $("#clickButton").on("click", function(event) {
             newsDiv.append(description);
             newsDiv.append(url);
             $("#displayNews").append(newsDiv);
-    }
-    //   $("#displayNews").html(JSON.stringify(response));
+        }
+        //   $("#displayNews").html(JSON.stringify(response));
     });
-  });
+});
 
-  $("#searchButton").on("click", function(event) {
+$("#searchButton").on("click", function (event) {
     event.preventDefault();
 
     var search = $("#searchButton").val();
 
-  var url= "https://www.googleapis.com/youtube/v3/search?part=snippet&q=essential+oils&type=video&key=AIzaSyA1PWaZZvpCOAzU4ftUcfsZlAOIU6pYCFQ";
-  $.ajax({
-    url: url,
-    method: "GET"
-  }).then(function (response) {
-      for (let index = 0; index < response.items.length; index++) {
-        console.log(response.articles[index].title);
-        console.log(response.articles[index].description);
-        console.log(response.articles[index].url);
-          
-          
-      }
-  
-  
-  
-//   $("#displayVideos").html(JSON.stringify(response));
+    var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=essential+oils&type=video&key=AIzaSyA1PWaZZvpCOAzU4ftUcfsZlAOIU6pYCFQ";
+    $.ajax({
+        url: url,
+        method: "GET"
+    }).then(function (response) {
+        for (let index = 0; index < response.items.length; index++) {
+            console.log(response.items[index]);
+            // console.log(response.items[index].title);
+            // console.log(response.items[index].description);
+            // console.log(response.items[index].url);
+
+            var searchDiv = $("<div>");
+            var title = $("<p>").text("Title: " + response.items[index].snippet.title);
+            var description = $("<p>").text("Description: " + response.items[index].snippet.description);
+            var videoURL = $("<p>").text("URL: " + response.items[index].snippet.thumbnails.default.url);
+            searchDiv.append(title);
+            searchDiv.append(description);
+            searchDiv.append(videoURL);
+            $("#displayVideos").append(searchDiv);
+        }
+    });
 });
-});
-
-
-
-
-
-
