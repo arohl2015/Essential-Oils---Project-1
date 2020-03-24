@@ -1,14 +1,23 @@
-function displaysanitizer () {
-    var sanitizer = $(this).attr("data-name");
-    //adding in the queryURL to call my topic
-    var queryURL = "https://api_basics.fda.gov/drug/event.json?api_key=Vh8vc8LbC81SVdaxi4vGMGNaN2p8TnrN5YxKswA4&search=hand_sanitizer&limit10";
+$("#clickButton").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the text from the input box
+    var news = $("#clickButton").val();
+
+    //construct our URL
+    var queryURL = 'http://newsapi.org/v2/everything?q="hand+sanitizer"&apiKey=d41b710dbebf47e0939ee69238607a46';
     $.ajax({
-        url: queryURL,
-        method: "GET"
-        //Per research: always prefer .then() so code is compatible with the open promise standard
+      url: queryURL,
+      method: "GET"
     }).then(function (response) {
-        //logging my responses and queryURL
-        console.log(queryURL);
-        console.log(response);
-        //class review - this stores the data from our AJAX
-        var result = response.data;
+
+      $("#displayNews").html(JSON.stringify(response));
+    });
+  });
+
+  
+
+
+
+
+

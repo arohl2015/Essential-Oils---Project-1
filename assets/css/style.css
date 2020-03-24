@@ -112,3 +112,8 @@ body {
                 rgba(255, 255, 255, 0) 70%, 
                 rgba(255, 255, 255, 0) 100%);
 }
+
+#card, #card-body {
+  margin-left: auto;
+  margin-right: auto;
+}
