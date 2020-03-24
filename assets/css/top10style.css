@@ -1,0 +1,25 @@
+#carouselExampleCaptions {
+    max-width: 75%;
+    text-align: center;
+    max-height: 600px;
+    margin: auto;
+}
+
+img {
+    object-fit: contain;
+    max-height: 600px;
+}
+
+p {
+    color: black;
+    text-emphasis: bold;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
