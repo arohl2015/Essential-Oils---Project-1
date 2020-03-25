@@ -63,6 +63,16 @@ body {
   margin: auto;
 }
 
+.display-4 {
+  text-align: center;
+  color: purple;
+}
+
+.lead {
+  text-align: center;
+  color: purple;
+}
+
 img {
   object-fit: contain;
   max-height: 600px;
@@ -71,6 +81,10 @@ img {
 p {
   color: black;
   text-emphasis: bold;
+}
+
+h4 {
+  text-decoration: underline;
 }
 
 .black {
