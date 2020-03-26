@@ -19,7 +19,7 @@ $("#clickButton").on("click", function (event) {
             var title = $("<p>").text("Title: " + response.articles[index].title);
             var description = $("<p>").text("Description: " + response.articles[index].description);
             var url = $("<a>").attr("href",  response.articles[index].url);
-            url.text("video click here")
+            url.text("click here for article")
             newsDiv.append(title);
             newsDiv.append(description);
             newsDiv.append(url);
