@@ -18,7 +18,8 @@ $("#clickButton").on("click", function (event) {
             var newsDiv = $("<div>");
             var title = $("<p>").text("Title: " + response.articles[index].title);
             var description = $("<p>").text("Description: " + response.articles[index].description);
-            var url = $("<p>").text("URL: " + response.articles[index].url);
+            var url = $("<a>").attr("href",  response.articles[index].url);
+            url.text("video click here")
             newsDiv.append(title);
             newsDiv.append(description);
             newsDiv.append(url);
@@ -33,7 +34,7 @@ $("#searchButton").on("click", function (event) {
 
     var search = $("#searchButton").val();
 
-    var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=essential+oils&type=video&key=AIzaSyA1PWaZZvpCOAzU4ftUcfsZlAOIU6pYCFQ";
+    var url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=essential+oils&type=video&key=AIzaSyDOMz55zjU19WsTvuKn5TtYkA6aPW4a2no";
     $.ajax({
         url: url,
         method: "GET"
@@ -41,16 +42,23 @@ $("#searchButton").on("click", function (event) {
         for (let index = 0; index < response.items.length; index++) {
             console.log(response.items[index]);
             // console.log(response.items[index].title);
-            // console.log(response.items[index].description);
+            // console.log(response.items[index].description);response.items[index].snippet.thumbnails.default.url)
             // console.log(response.items[index].url);
 
             var searchDiv = $("<div>");
+            searchDiv.addClass("divVideo")
             var title = $("<p>").text("Title: " + response.items[index].snippet.title);
             var description = $("<p>").text("Description: " + response.items[index].snippet.description);
-            var videoURL = $("<p>").text("URL: " + response.items[index].snippet.thumbnails.default.url);
+           // var videoURL = $("<p>").text("URL: " + response.items[index].snippet.thumbnails.default.url);
+           var url = `https://www.youtube.com/watch?v=oud-${response.items[index].id.videoId}`
+            //var videoURL = $("<a>").attr("href",  response.items[index].snippet.thumbnails.default.url);
+            var videoURL = $("<a>").attr("href", url);
+            videoURL.text("video click here")
+            videoURL.addClass("aVideo")
             searchDiv.append(title);
             searchDiv.append(description);
             searchDiv.append(videoURL);
+            searchDiv.append("<hr/>")
             $("#displayVideos").append(searchDiv);
         }
     });
