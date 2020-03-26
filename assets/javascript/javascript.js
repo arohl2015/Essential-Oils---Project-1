@@ -18,7 +18,8 @@ $("#clickButton").on("click", function (event) {
             var newsDiv = $("<div>");
             var title = $("<p>").text("Title: " + response.articles[index].title);
             var description = $("<p>").text("Description: " + response.articles[index].description);
-            var url = $("<p>").text("URL: " + response.articles[index].url);
+            var url = $("<a>").attr("href",  response.articles[index].url);
+            url.text("click here");
             newsDiv.append(title);
             newsDiv.append(description);
             newsDiv.append(url);
@@ -47,7 +48,8 @@ $("#searchButton").on("click", function (event) {
             var searchDiv = $("<div>");
             var title = $("<p>").text("Title: " + response.items[index].snippet.title);
             var description = $("<p>").text("Description: " + response.items[index].snippet.description);
-            var videoURL = $("<p>").text("URL: " + response.items[index].snippet.thumbnails.default.url);
+            var videoURL = $("<a>").attr("href", response.items[index].snippet.thumbnails.default.url);
+            videoURL.text("click here");
             searchDiv.append(title);
             searchDiv.append(description);
             searchDiv.append(videoURL);

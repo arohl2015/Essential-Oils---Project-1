@@ -7,9 +7,9 @@ Danielle Pollesche, Jaclyn Hardy, & April Rohl
 Our group put together a project to educate and keep people informed about the various uses of Essential Oils, outside of them being used for "smelling good". This was a topical idea, as you can create natural hand sanitizer using essential oils, along woth other health and wellness benefits. We also liked that this topic could appeal to many individuals.
 
 ## Responsibilities:
-Danielle: Essential oil expertise, CSS, HTML, how-to page, and finding a new tech we hadn’t used
-Jaclyn: Research, HTML/CSS for top 10 page, finding a new tech we hadn’t used, and GitHub/Terminal knowledge
-April:  APIs, Hand Sanitizer page, management of GitHub repository and presentation
+* Danielle: Essential oil expertise, CSS, HTML, how-to page, and finding a new tech we hadn’t used
+* Jaclyn: Research, HTML/CSS for top 10 page, finding a new tech we hadn’t used, and GitHub/Terminal knowledge
+* April:  APIs, Hand Sanitizer page, management of GitHub repository and presentation
 
 ## Challenges:
 * Finding APIs that tied into our topic (there were none specifically for essential oils)
