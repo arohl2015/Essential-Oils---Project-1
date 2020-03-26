@@ -13,9 +13,11 @@ Our group put together a project to educate and keep people informed about the v
 
 ## Challenges:
 * Finding APIs that tied into our topic (there were none specifically for essential oils)
-* Finding free APIs. Did a lot of research into ones that turned into dead ends as they required a storefront, billing information, or had limits on use.
+* Finding free APIs. Did a lot of research into ones that turned into dead ends as they required a storefront,      billing information, or had limits on use.
 * Inserting new technology into the project we hadn't used before
 * The initial submitting and approval of branches to merge all our work together
+* The final deployed GitHub link blocked our newsAPI results but work locally - you can locate our results here:
+  http://newsapi.org/v2/everything?q=%22hand+sanitizer%22&apiKey=d41b710dbebf47e0939ee69238607a46
 
 ## Future Improvement's We'd Like to Make:
 * Addition of more features – i.e. tying in astrology to essential oils
